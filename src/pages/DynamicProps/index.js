@@ -15,7 +15,7 @@ const Story = props => {
   );
 };
 
-const PropsDynamic = () => {
+const DynamicProps = () => {
   return (
     <View>
       <Text>Materi component dinamis dengan Props</Text>
@@ -44,6 +44,6 @@ const PropsDynamic = () => {
   );
 };
 
-export default PropsDynamic;
+export default DynamicProps;
 
 const styles = StyleSheet.create({});
