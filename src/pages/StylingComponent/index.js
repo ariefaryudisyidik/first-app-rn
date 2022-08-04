@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
-import github from './GitHub.png';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import github from '../../assets/image/github.png';
 
-const StylingReactNativeComponent = () => {
+const StylingComponent = () => {
   return (
     <View>
       <Text style={styles.text}>Styling Component</Text>
@@ -38,7 +38,6 @@ const StylingReactNativeComponent = () => {
             fontSize: 12,
             fontWeight: 'bold',
             color: '#F2994A',
-            marginTop: 16,
           }}>
           Rp. 25.000.000,-
         </Text>
@@ -69,12 +68,12 @@ const StylingReactNativeComponent = () => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 18,
+    textAlign: 'center',
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#f4a261',
-    marginLeft: 20,
-    marginTop: 40,
+    marginTop: 16,
   },
 });
 
-export default StylingReactNativeComponent;
+export default StylingComponent;

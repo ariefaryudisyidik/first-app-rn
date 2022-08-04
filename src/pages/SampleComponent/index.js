@@ -1,10 +1,18 @@
 import React, {Component} from 'react';
-import {View, Text, TextInput, Image} from 'react-native';
+import {Image, Text, TextInput, View} from 'react-native';
 
 const SampleComponent = () => {
   return (
-    <View style={{marginBottom: 24}}>
-      <Text>SampleComponent</Text>
+    <View style={{borderWidth: 1}}>
+      <Text
+        style={{
+          fontWeight: 'bold',
+          fontSize: 20,
+          textAlign: 'center',
+          marginTop: 16,
+        }}>
+        SampleComponent
+      </Text>
       <View style={{width: 80, height: 80, backgroundColor: '#264653'}} />
       <Text>Arief</Text>
       <Text>Aryudi</Text>
