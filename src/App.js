@@ -7,11 +7,13 @@ import FlexBox from './pages/FlexBox';
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setIsShow(false);
     }, 6000);
   });
+
   return (
     <View>
       <ScrollView>
