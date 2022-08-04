@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, View} from 'react-native';
-import Communication from './pages/Communication';
+import BasicJavaScript from './pages/BasicJavaScript';
+// import Communication from './pages/Communication';
 // import Position from './pages/Position';
 // import DynamicState from './pages/DynamicState';
 // import SampleComponent from './pages/SampleComponent';
@@ -23,7 +24,8 @@ const App = () => {
         {/* <Position /> */}
         {/* <DynamicProps /> */}
         {/* <DynamicState /> */}
-        <Communication />
+        {/* <Communication /> */}
+        <BasicJavaScript />
       </ScrollView>
     </View>
   );
