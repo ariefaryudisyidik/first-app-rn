@@ -1,12 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {ScrollView, View} from 'react-native';
-import BasicJavaScript from './pages/BasicJavaScript';
+import React, { useEffect, useState } from 'react';
+import { ScrollView, View } from 'react-native';
+import ReactNativeSvg from './pages/ReactNativeSvg';
+// import BasicJavaScript from './pages/BasicJavaScript';
 // import Communication from './pages/Communication';
 // import Position from './pages/Position';
 // import DynamicState from './pages/DynamicState';
 // import SampleComponent from './pages/SampleComponent';
 
-const App = () => {
+function App() {
   const [isShow, setIsShow] = useState(true);
 
   useEffect(() => {
@@ -25,10 +26,11 @@ const App = () => {
         {/* <DynamicProps /> */}
         {/* <DynamicState /> */}
         {/* <Communication /> */}
-        <BasicJavaScript />
+        {/* <BasicJavaScript /> */}
+        <ReactNativeSvg />
       </ScrollView>
     </View>
   );
-};
+}
 
 export default App;

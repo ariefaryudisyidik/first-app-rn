@@ -1,8 +1,10 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {
+  Image, StyleSheet, Text, View,
+} from 'react-native';
 import cart from '../../assets/icon/cart.png';
 
-const Cart = props => {
+function Cart(props) {
   return (
     <View>
       <View style={styles.cartWrapper}>
@@ -12,7 +14,7 @@ const Cart = props => {
       <Text style={styles.text}>Cart</Text>
     </View>
   );
-};
+}
 
 export default Cart;
 
@@ -27,8 +29,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
   },
-  cartIcon: {width: 50, height: 50},
-  text: {fontSize: 12, color: '#777777', fontWeight: '700', marginTop: 8},
+  cartIcon: { width: 50, height: 50 },
+  text: {
+    fontSize: 12, color: '#777777', fontWeight: '700', marginTop: 8,
+  },
   notification: {
     fontSize: 12,
     color: 'white',

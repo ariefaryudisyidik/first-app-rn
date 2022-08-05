@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Cart from '../../components/Cart';
 import Product from '../../components/Product';
 
-const Communication = () => {
+function Communication() {
   const [totalProduct, setTotalProduct] = useState(0);
   return (
     <View style={styles.container}>
@@ -12,7 +12,7 @@ const Communication = () => {
       <Product onButtonPress={() => setTotalProduct(totalProduct + 1)} />
     </View>
   );
-};
+}
 
 export default Communication;
 

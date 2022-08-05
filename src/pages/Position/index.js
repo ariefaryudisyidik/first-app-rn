@@ -1,8 +1,10 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {
+  Image, StyleSheet, Text, View,
+} from 'react-native';
 import cart from '../../assets/icon/cart.png';
 
-const Position = () => {
+function Position() {
   return (
     <View style={styles.wrapper}>
       <Text
@@ -12,7 +14,8 @@ const Position = () => {
           fontWeight: 'bold',
           color: '#f4a261',
           marginTop: 16,
-        }}>
+        }}
+      >
         Position
       </Text>
       <View style={styles.cartWrapper}>
@@ -22,10 +25,10 @@ const Position = () => {
       <Text style={styles.text}>Cart</Text>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  wrapper: {padding: 20, alignItems: 'center'},
+  wrapper: { padding: 20, alignItems: 'center' },
   cartWrapper: {
     borderWidth: 1,
     borderColor: '#4398D1',
@@ -36,8 +39,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
   },
-  cartIcon: {width: 50, height: 50},
-  text: {fontSize: 12, color: '#777777', fontWeight: '700', marginTop: 8},
+  cartIcon: { width: 50, height: 50 },
+  text: {
+    fontSize: 12, color: '#777777', fontWeight: '700', marginTop: 8,
+  },
   notification: {
     fontSize: 12,
     color: 'white',

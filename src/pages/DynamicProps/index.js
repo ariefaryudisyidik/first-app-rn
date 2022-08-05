@@ -1,26 +1,28 @@
 import React from 'react';
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Image, ScrollView, StyleSheet, Text, View,
+} from 'react-native';
 
-const Story = props => {
+function Story(props) {
   return (
-    <View style={{alignItems: 'center', marginRight: 20}}>
+    <View style={{ alignItems: 'center', marginRight: 20 }}>
       <Image
         source={{
           uri: props.image,
         }}
-        style={{width: 80, height: 80, borderRadius: 80 / 2}}
+        style={{ width: 80, height: 80, borderRadius: 80 / 2 }}
       />
-      <Text style={{maxWidth: 80, textAlign: 'center'}}>{props.title}</Text>
+      <Text style={{ maxWidth: 80, textAlign: 'center' }}>{props.title}</Text>
     </View>
   );
-};
+}
 
-const DynamicProps = () => {
+function DynamicProps() {
   return (
     <View>
       <Text>Materi component dinamis dengan Props</Text>
       <ScrollView horizontal>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <Story title="YouTube" image="https://reactjs.org/logo-og.png" />
           <Story
             title="Facebook"
@@ -42,7 +44,7 @@ const DynamicProps = () => {
       </ScrollView>
     </View>
   );
-};
+}
 
 export default DynamicProps;
 

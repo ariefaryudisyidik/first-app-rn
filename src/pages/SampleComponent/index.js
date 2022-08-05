@@ -1,38 +1,41 @@
-import React, {Component} from 'react';
-import {Image, Text, TextInput, View} from 'react-native';
+import React, { Component } from 'react';
+import {
+  Image, Text, TextInput, View,
+} from 'react-native';
 
-const SampleComponent = () => {
+function SampleComponent() {
   return (
-    <View style={{borderWidth: 1}}>
+    <View style={{ borderWidth: 1 }}>
       <Text
         style={{
           fontWeight: 'bold',
           fontSize: 20,
           textAlign: 'center',
           marginTop: 16,
-        }}>
+        }}
+      >
         SampleComponent
       </Text>
-      <View style={{width: 80, height: 80, backgroundColor: '#264653'}} />
+      <View style={{ width: 80, height: 80, backgroundColor: '#264653' }} />
       <Text>Arief</Text>
       <Text>Aryudi</Text>
       <Text>Syidik</Text>
       <Photo />
-      <TextInput style={{borderWidth: 1}} />
+      <TextInput style={{ borderWidth: 1 }} />
       <BoxGreen />
       <Profile />
     </View>
   );
-};
+}
 
-const Photo = () => {
+function Photo() {
   return (
     <Image
-      source={{uri: 'https://placeimg.com/100/100/any'}}
-      style={{width: 100, height: 100}}
+      source={{ uri: 'https://placeimg.com/100/100/any' }}
+      style={{ width: 100, height: 100 }}
     />
   );
-};
+}
 
 class BoxGreen extends Component {
   render() {
@@ -45,10 +48,10 @@ class Profile extends Component {
     return (
       <View>
         <Image
-          source={{uri: 'https://placeimg.com/100/100/animals'}}
-          style={{width: 100, height: 100, borderRadius: 50}}
+          source={{ uri: 'https://placeimg.com/100/100/animals' }}
+          style={{ width: 100, height: 100, borderRadius: 50 }}
         />
-        <Text style={{color: 'red', fontSize: 24}}>Image Animal</Text>
+        <Text style={{ color: 'red', fontSize: 24 }}>Image Animal</Text>
       </View>
     );
   }

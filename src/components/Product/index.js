@@ -1,8 +1,10 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image, StyleSheet, Text, TouchableOpacity, View,
+} from 'react-native';
 import github from '../../assets/image/github.png';
 
-const Product = props => {
+function Product(props) {
   return (
     <View style={styles.wrapper}>
       <Image source={github} style={styles.imageProduct} />
@@ -16,7 +18,7 @@ const Product = props => {
       </TouchableOpacity>
     </View>
   );
-};
+}
 
 export default Product;
 
@@ -28,14 +30,14 @@ const styles = StyleSheet.create({
     width: 212,
     borderRadius: 8,
   },
-  imageProduct: {width: 188, height: 107, borderRadius: 8},
-  productName: {fontSize: 14, fontWeight: 'bold', marginTop: 16},
+  imageProduct: { width: 188, height: 107, borderRadius: 8 },
+  productName: { fontSize: 14, fontWeight: 'bold', marginTop: 16 },
   productPrice: {
     fontSize: 12,
     fontWeight: 'bold',
     color: '#F2994A',
   },
-  location: {fontSize: 12, fontWeight: '300', marginTop: 12},
+  location: { fontSize: 12, fontWeight: '300', marginTop: 12 },
   buttonWrapper: {
     backgroundColor: '#6FCF97',
     paddingVertical: 6,

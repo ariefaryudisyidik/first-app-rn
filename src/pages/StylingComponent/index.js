@@ -1,8 +1,10 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {
+  Image, StyleSheet, Text, View,
+} from 'react-native';
 import github from '../../assets/image/github.png';
 
-const StylingComponent = () => {
+function StylingComponent() {
   return (
     <View>
       <Text style={styles.text}>Styling Component</Text>
@@ -25,12 +27,13 @@ const StylingComponent = () => {
           backgroundColor: '#F2F2F2',
           width: 212,
           borderRadius: 8,
-        }}>
+        }}
+      >
         <Image
           source={github}
-          style={{width: 188, height: 107, borderRadius: 8}}
+          style={{ width: 188, height: 107, borderRadius: 8 }}
         />
-        <Text style={{fontSize: 14, fontWeight: 'bold', marginTop: 16}}>
+        <Text style={{ fontSize: 14, fontWeight: 'bold', marginTop: 16 }}>
           New MacBook Pro 2019
         </Text>
         <Text
@@ -38,10 +41,11 @@ const StylingComponent = () => {
             fontSize: 12,
             fontWeight: 'bold',
             color: '#F2994A',
-          }}>
+          }}
+        >
           Rp. 25.000.000,-
         </Text>
-        <Text style={{fontSize: 12, fontWeight: '300', marginTop: 12}}>
+        <Text style={{ fontSize: 12, fontWeight: '300', marginTop: 12 }}>
           Jakarta Barat
         </Text>
         <View
@@ -50,21 +54,23 @@ const StylingComponent = () => {
             paddingVertical: 6,
             borderRadius: 25,
             marginTop: 20,
-          }}>
+          }}
+        >
           <Text
             style={{
               fontSize: 14,
               fontWeight: '600',
               color: 'white',
               textAlign: 'center',
-            }}>
+            }}
+          >
             BELI
           </Text>
         </View>
       </View>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   text: {

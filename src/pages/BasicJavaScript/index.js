@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 // Primitive
 const name = 'Arief Aryudi Syidik'; // String
-let age = 21; // Number
+const age = 21; // Number
 const isLife = true; // Boolean
 
 // Complex
@@ -19,9 +19,7 @@ const animal = {
   },
 }; // Object
 
-const greeting = (name, age) => {
-  return console.log(`Hello ${name} your age is ${age}`);
-}; // Function
+const greeting = (name, age) => console.log(`Hello ${name} your age is ${age}`); // Function
 
 greeting('Arief', 21);
 
@@ -45,45 +43,47 @@ typeof peopleName; // Object
 //   console.log('Whose animal is this');
 // }
 
-const helloAnimal = animalObject => {
-  //   let resultHello = '';
-  //   if (animalObject.name === 'Miaw') {
-  //     resultHello = 'Hallo Miaw';
-  //   } else {
-  //     resultHello = 'Whose animal is this';
-  //   }
-  //   return resultHello;
+const helloAnimal = (animalObject) =>
+//   let resultHello = '';
+//   if (animalObject.name === 'Miaw') {
+//     resultHello = 'Hallo Miaw';
+//   } else {
+//     resultHello = 'Whose animal is this';
+//   }
+//   return resultHello;
 
-  return animalObject.name === 'Miaw'
+  (animalObject.name === 'Miaw'
     ? 'Halo Miaw apa kabar?'
-    : 'Ini hewan Siapa?';
-};
-
-const BasicJavaScript = () => {
+    : 'Ini hewan Siapa?');
+function BasicJavaScript() {
   return (
     <View style={styles.container}>
       <Text style={styles.textTitle}>
         Materi Basic JavaScript di React Native
       </Text>
       <Text>
-        Name: {name}
-        {'\n'}Age: {age}
+        Name:
+        {' '}
+        {name}
+        {'\n'}
+        Age:
+        {age}
       </Text>
       <Text>{helloAnimal(animal)}</Text>
       <Text>{peopleName[0]}</Text>
       <Text>{peopleName[1]}</Text>
       <Text>{peopleName[2]}</Text>
       <Text>=====</Text>
-      {peopleName.map(people => (
-        <Text>{people}</Text>
+      {peopleName.map((people) => (
+        <Text key={people}>{people}</Text>
       ))}
     </View>
   );
-};
+}
 
 export default BasicJavaScript;
 
 const styles = StyleSheet.create({
-  container: {padding: 16},
-  textTitle: {textAlign: 'center'},
+  container: { padding: 16 },
+  textTitle: { textAlign: 'center' },
 });

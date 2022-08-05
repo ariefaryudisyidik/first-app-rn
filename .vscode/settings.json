@@ -1,0 +1,16 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "html.format.enable": true,
+  "json.format.enable": true,
+  "javascript.format.enable": true,
+  "typescript.format.enable": true,
+  "css.format.enable": true,
+  "less.format.enable": true,
+  "scss.format.enable": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
