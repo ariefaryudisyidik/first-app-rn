@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ScrollView, View } from 'react-native';
-import CallAPIVanilla from './pages/CallAPIVanilla';
+import CallAPIAxios from './pages/CallAPIAxios';
+// import CallAPIVanilla from './pages/CallAPIVanilla';
 // import ReactNativeSvg from './pages/ReactNativeSvg';
 // import BasicJavaScript from './pages/BasicJavaScript';
 // import Communication from './pages/Communication';
@@ -29,7 +30,8 @@ function App() {
         {/* <Communication /> */}
         {/* <BasicJavaScript /> */}
         {/* <ReactNativeSvg /> */}
-        <CallAPIVanilla />
+        {/* <CallAPIVanilla /> */}
+        <CallAPIAxios />
       </ScrollView>
     </View>
   );
