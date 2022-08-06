@@ -1,29 +1,28 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Arief",
+      "email": "arief@email.com",
+      "bidang": "RN Dev",
+      "id": 2
     },
     {
-      "id": 2,
-      "title": "React Native",
-      "author": "Arief Aryudi Syidik"
-    },
-    {
-      "title": "Android Developer",
-      "author": "Arief Aryudi Syidik",
+      "name": "Fazri",
+      "email": "fazri@email.com",
+      "bidang": "Android",
       "id": 3
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Adi",
+      "email": "adi@mail.com",
+      "bidang": "FrontEnd Dev",
+      "id": 4
+    },
+    {
+      "name": "Rangga",
+      "email": "rangga@mail.com",
+      "bidang": "BackEnd Dev",
+      "id": 5
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

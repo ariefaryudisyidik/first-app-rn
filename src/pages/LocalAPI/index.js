@@ -1,14 +1,15 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 
-const Item = () => {
+const Item = ({ name, email, bidang }) => {
   return (
     <View style={styles.itemContainer}>
-      <Image source={{ uri: 'https://i.pravatar.cc/300' }} style={styles.avatar} />
+      <Image source={{ uri: `https://ui-avatars.com/api/?name=${email}` }} style={styles.avatar} />
       <View style={styles.desc}>
-        <Text style={styles.descName}>Nama</Text>
-        <Text style={styles.descEmail}>Email</Text>
-        <Text style={styles.descBidang}>Bidang</Text>
+        <Text style={styles.descName}>{name}</Text>
+        <Text style={styles.descEmail}>{email}</Text>
+        <Text style={styles.descBidang}>{bidang}</Text>
       </View>
       <Text style={styles.delete}>X</Text>
     </View>
@@ -16,20 +17,65 @@ const Item = () => {
 };
 
 const LocalAPI = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [bidang, setBidang] = useState('');
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const submit = () => {
+    const data = {
+      name,
+      email,
+      bidang,
+    };
+
+    axios.post('http://10.0.2.2:3004/users', data).then((res) => console.log('res: ', res));
+    setName('');
+    setEmail('');
+    setBidang('');
+    getData();
+  };
+
+  const getData = () => {
+    axios.get('http://10.0.2.2:3004/users').then((res) => {
+      console.log('res getData(): ', res);
+      setUsers(res.data);
+    });
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.textTitle}>Local API (JSON Server)</Text>
       <Text style={styles.textSubtitle}>Masukkan Anggota</Text>
-      <TextInput placeholder="Nama" style={styles.input} />
-      <TextInput placeholder="Email" style={styles.input} />
-      <TextInput placeholder="Bidang" style={styles.input} />
+      <TextInput
+        placeholder="Nama"
+        style={styles.input}
+        value={name}
+        onChangeText={(value) => setName(value)}
+      />
+      <TextInput
+        placeholder="Email"
+        style={styles.input}
+        value={email}
+        onChangeText={(value) => setEmail(value)}
+      />
+      <TextInput
+        placeholder="Bidang"
+        style={styles.input}
+        value={bidang}
+        onChangeText={(value) => setBidang(value)}
+      />
       <View style={styles.button}>
-        <Button title="Simpan" />
+        <Button title="Simpan" onPress={submit} />
       </View>
       <View style={styles.line} />
-      <Item />
-      <Item />
-      <Item />
+      {users.map((user) => {
+        return <Item key={user.id} name={user.name} email={user.email} bidang={user.bidang} />;
+      })}
     </View>
   );
 };
@@ -43,7 +89,7 @@ const styles = StyleSheet.create({
   line: { height: 2, backgroundColor: 'black', marginVertical: 20 },
   input: { borderWidth: 1, marginTop: 8, borderRadius: 8, paddingHorizontal: 16 },
   button: { marginTop: 8 },
-  avatar: { width: 100, height: 100, borderRadius: 100 },
+  avatar: { width: 80, height: 80, borderRadius: 100 },
   itemContainer: { flexDirection: 'row', marginBottom: 16 },
   desc: { marginLeft: 16, flex: 1 },
   descName: { fontSize: 20, fontWeight: 'bold' },
