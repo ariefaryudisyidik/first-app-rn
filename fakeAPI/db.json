@@ -5,24 +5,6 @@
       "email": "arief@email.com",
       "bidang": "RN Dev",
       "id": 2
-    },
-    {
-      "name": "Fazri",
-      "email": "fazri@email.com",
-      "bidang": "Android",
-      "id": 3
-    },
-    {
-      "name": "Abi",
-      "email": "abi@mail.com",
-      "bidang": "FrontEnd Dev",
-      "id": 4
-    },
-    {
-      "name": "Ridwan",
-      "email": "ridwan@mail.com",
-      "bidang": "BackEnd Dev",
-      "id": 5
     }
   ]
 }
