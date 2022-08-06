@@ -13,14 +13,14 @@
       "id": 3
     },
     {
-      "name": "Adi",
-      "email": "adi@mail.com",
+      "name": "Abi",
+      "email": "abi@mail.com",
       "bidang": "FrontEnd Dev",
       "id": 4
     },
     {
-      "name": "Rangga",
-      "email": "rangga@mail.com",
+      "name": "Ridwan",
+      "email": "ridwan@mail.com",
       "bidang": "BackEnd Dev",
       "id": 5
     }
