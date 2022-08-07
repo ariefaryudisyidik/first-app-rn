@@ -49,7 +49,7 @@ const LocalAPI = () => {
     };
 
     if (button === 'Simpan') {
-      axios.post('http://10.0.2.2:3004/users', data).then((res) => console.log('res: ', res));
+      axios.post('http://10.0.2.2:3004/users', data).then((res) => console.log('res post: ', res));
       setName('');
       setEmail('');
       setBidang('');
@@ -68,7 +68,7 @@ const LocalAPI = () => {
 
   const getData = () => {
     axios.get('http://10.0.2.2:3004/users').then((res) => {
-      console.log('res getData(): ', res);
+      console.log('res get: ', res);
       setUsers(res.data);
     });
   };
