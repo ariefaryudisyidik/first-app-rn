@@ -66,11 +66,11 @@ const LocalAPI = () => {
     }
   };
 
-  const getData = () => {
-    axios.get('http://10.0.2.2:3004/users').then((res) => {
-      console.log('res get: ', res);
-      setUsers(res.data);
-    });
+  const getData = async () => {
+    const response = await axios.get('http://10.0.2.2:3004/users');
+    console.log('res get: ', response.data);
+    console.log('users: ', users);
+    setUsers(response.data);
   };
 
   const selectItem = (item) => {
@@ -82,12 +82,11 @@ const LocalAPI = () => {
     setButton('Update');
   };
 
-  const deleteItem = (item) => {
+  const deleteItem = async (item) => {
     console.log(item);
-    axios.delete(`http://10.0.2.2:3004/users/${item.id}`).then((res) => {
-      console.log('res delete: ', res);
-      getData();
-    });
+    const response = await axios.delete(`http://10.0.2.2:3004/users/${item.id}`);
+    console.log('res delete: ', response);
+    await getData();
   };
 
   return (

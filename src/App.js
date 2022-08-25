@@ -1,15 +1,11 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { LogBox } from 'react-native';
 import LocalAPI from './pages/LocalAPI';
 
+LogBox.ignoreLogs(['Remote debugger']);
+
 function App() {
-  return (
-    <View>
-      <ScrollView>
-        <LocalAPI />
-      </ScrollView>
-    </View>
-  );
+  return <LocalAPI />;
 }
 
 export default App;
